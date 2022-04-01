@@ -1,9 +1,9 @@
-:root {  
+:root {
   /* blue-cyan paint splash isolated on white background */
   /** primary Color */
-  --teal:#024D5E;
-  --petrol: #025E73; 
-  --ocean: #037F8C; 
+  --teal: #024D5E;
+  --petrol: #025E73;
+  --ocean: #037F8C;
   --topaz: #04BFBF;
   --darkTurqoise: #04D9C4;
 
@@ -16,10 +16,10 @@
   --white: #FFF;
 
 
-  /**  secondary Color : Brown Shades */  
-  --irishCoffee:#5F3D26;
+  /**  secondary Color : Brown Shades */
+  --irishCoffee: #5F3D26;
   --plum: #4b0d49;
-  
+
 
 
   /* reference colors colors */
@@ -40,6 +40,7 @@ by having below two selector
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -47,25 +48,26 @@ html {
 }
 
 body {
-padding: 0;
-margin: 0;
-font-family: var(--sans);
-background-color: var(--porcelain);
-color: var(--teal);
-font-size: var(--font-size);
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--porcelain);
+  color: var(--teal);
+  font-size: var(--font-size);
 }
 
+/* to remove the margin for consistenency across browser */
 h1, h2, h3 {
-margin: 0;
+  margin: 0;
 }
 
 a {
-color: var(--magenta)
+  color: var(--magenta)
 }
 
 a:hover {
-color: var(--hotmag);
-text-decoration: none;
+  color: var(--hotmag);
+  text-decoration: none;
 }
 
 .button {
@@ -75,22 +77,73 @@ text-decoration: none;
   color: var(--white);
   font-family: var(--mono);
   text-decoration: none;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
   color: var(--black);
   background-color: var(--hotmag);
-  }
+}
 
-  .section-plum {
-    background-color: var(--plum);
-  }
+.section-plum {
+  background-color: var(--plum);
+}
 
 .gradient {
   height: 2px;
-  background: linear-gradient(90deg, rgba(67,182,26,1) 25%, rgba(109,0,255,1) 86%); 
+  background: linear-gradient(90deg, rgba(67, 182, 26, 1) 25%, rgba(109, 0, 255, 1) 86%);
 }
 
+/** navbar */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+}
+
+nav a {
+  color: var(--petrol);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--magenta);
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+
+nav h1 [class*="fa-"] {
+  font-size: 120%;
+  color: var(--magenta);
+}
+
+nav h1 span.name {
+  font-size: 120%;
+}
 
 /** intro */
 #intro {
@@ -100,114 +153,48 @@ text-decoration: none;
 }
 
 #intro p {
-font-size: 1rem;
-line-height: 1.5; /* no unit of measure needed as we need responsive to font-size */
+  font-size: 1rem;
+  line-height: 1.5;
+  /* no unit of measure needed as we need responsive to font-size */
 }
 
 #intro .name {
-font-family: var(--mono);  
+  font-family: var(--mono);
 }
 
 .name span {
-font-family: var(--sans);
-font-size: 4rem;
-color:var(--magenta);  
-display: block;
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--magenta);
+  display: block;
 }
 
 #intro h2 {
-font-size: 4rem;
-font-weight:normal;
+  font-size: 4rem;
+  font-weight: normal;
 }
 
 /** Contact Section **/
 
 #contact {
-color: var(--white);
-padding: 2rem 0;  
-width: 400px;
-margin: 0 auto;
-}
-
-#contact .heading {
-margin: 0;
-font-size: 1.3rem;
-}
-
-#contact .info {
-font-size: 1rem;
-}
-
-#contact .btn-group {  
-  margin-top: 2rem;
-  font-size: 1rem;
-}
-
-/** navbar */
-nav { 
-font-family: var(--mono);
-font-size: 80%;
-padding: 1rem;
-}
-
-nav h1 a {
-font-family : var(--sans);
-}
-
-nav ul {
-list-style-type : none;
-padding : 0;
-margin: 0;
-display : flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-gap: 2rem;
-}
-
-nav [class*="fa-"] {
-font-size: 150%;
-}
-
-nav a {
-color: var(--petrol);
-text-decoration: none;
-display: block;
-}
-
-nav a:hover,
-nav [class*="fa-"]:hover {
-color: var(--magenta);
-}
-
-nav li:first-child {
-flex-basis: 100%;
-text-align: center;
-}
-
-
-nav h1 [class*="fa-"] {
-font-size: 120%;
-color : var(--magenta);
-}
-
-nav h1 span.name {
-font-size : 120%;
-}
-
-
-/** responsive */
-@media(min-width: 850px) {
-nav { 
-  max-width: 1200px;
+  color: var(--white);
+  padding: 2rem 0;
+  width: 400px;
   margin: 0 auto;
 }
 
-nav li:first-child {
-  flex-basis: auto;
-  text-align: center;
-  margin-right: auto;
+#contact .heading {
+  margin: 0;
+  font-size: 1.3rem;
 }
+
+#contact .info {
+  font-size: 1rem;
+}
+
+#contact .btn-group {
+  margin-top: 2rem;
+  font-size: 1rem;
 }
 
 /** Footer */
@@ -217,23 +204,36 @@ footer {
 }
 
 footer h2 {
-font-size: 150%;
-font-weight: normal;
+  font-size: 150%;
+  font-weight: normal;
 }
 
 footer ul {
-list-style-type : none;
-padding : 0;
-display : flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-gap: 3rem;
-font-size: 2rem;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 2rem;
 }
 
 footer [class*="fa-"] {
-font-size: 150%;
+  font-size: 150%;
 }
 
 
+/** responsive */
+@media(min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: center;
+    margin-right: auto;
+  }
+}
