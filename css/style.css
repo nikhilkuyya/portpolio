@@ -88,9 +88,18 @@ a:hover {
   background-color: var(--plum);
 }
 
+.section-dkblue {
+  background-color: var(--teal);
+  color: var(--porcelain);
+}
+
 .gradient {
   height: 2px;
   background: linear-gradient(90deg, rgba(67, 182, 26, 1) 25%, rgba(109, 0, 255, 1) 86%);
+}
+
+img {
+  width: 100%;
 }
 
 /** navbar */
@@ -148,8 +157,6 @@ nav h1 span.name {
 /** intro */
 #intro {
   padding: 4rem 1em 10em 1em;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 #intro p {
@@ -223,17 +230,118 @@ footer [class*="fa-"] {
   font-size: 150%;
 }
 
+/** Projects Section */
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem*1.5);
+}
+
+#projects article {
+  margin-bottom : 3rem;
+}
+
+#projects article h3 {
+  color: var(--darkTurqoise);
+}
+
+#projects article h4 {
+   margin : 0;
+  font-family: var(--mono);
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+#projects article .black-box {
+  background-color : var(--black);
+  padding: 1rem;
+  border-radius : 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#projects article ul {
+  margin : 0;
+  list-style: none;
+  padding: 0;
+}
+
+#projects article .tech-stack {
+  display : flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+#projects article .image-frame {
+  margin-top: 1.5rem;
+  border-left: 2px solid var(--darkTurqoise);
+  border-top: 2px solid var(--darkTurqoise);
+  padding: 1rem;
+  border-radius : 10px;
+}
+
 
 /** responsive */
-@media(min-width: 850px) {
-  nav {
-    max-width: 1200px;
-    margin: 0 auto;
+@media(min-width: 550px) {
+  #projects article {
+    display : grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
   }
+  
+  #projects article img {
+    grid-row: 1/2;
+  }
+  
+  #projects article .text {
+    grid-row: 1/2;
+    order: 2;
+  }
+  
+  #projects article:nth-child(odd) img {
+    grid-column : 1/6;
+  }
+  
+  #projects article:nth-child(odd) .text {
+    grid-column: 5/11;
+    text-align: right;
+ }
+  
+  #projects article:nth-child(even) img {
+    grid-column: 6/11;
+  }
+  
+  
+  #projects article:nth-child(even) .text {
+    grid-column: 1/7;
+    text-align: left;
+  }
+  
+ #projects article:nth-child(odd) .tech-stack {
+    justify-content: flex-end;
+  }
+  
+  #projects article:nth-child(even) .tech-stack {
+    justify-content: flex-start;
+  }
+}
 
+
+@media(min-width: 850px) {
+  
+  nav,#intro,#projects,#footer,#contact {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   nav li:first-child {
     flex-basis: auto;
     text-align: center;
     margin-right: auto;
   }
 }
+
