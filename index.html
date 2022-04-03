@@ -131,12 +131,35 @@
       <p class="info">
         I'm always interested in hearing about opportunity to contribute in developement, testing web3 application.
       </p>
+      <div class="contact-options">
+        <form name="contact" netlify class="contact-form" action="/"   netlify-honeypot="bot-field">
+          <p hidden aria-hidden="true">
+            <label>
+              Don’t fill this out if you’re human: <input type="hidden" aria-hidden="true" name="bot-field" />
+            </label>
+          </p>
+          <p>
+            <label>Name <input type="text" name="name" placeholder="Full Name" autocomplete="off"/></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" placeholder="Enter Email Id"/></label>
+          </p>
+          <p>
+            <label>Message <textarea name="message" placeholder="Enter Message"></textarea></label>
+          </p>
 
-      <p class="btn-group">
-        <a href="mailto:nikhilkuyya@gmail.com" class="button">
-          <span>Email me</span>
-        </a>
-      </p>
+          <div>
+            <button type="submit" class="button">Send</button>
+          </div>
+        </form>
+        <p class="align-col-center divider-text">OR</p>
+        <p class="btn-container align-col-center">
+          <a href="mailto:nikhilkuyya@gmail.com" class="button">
+            <span>Email me</span>
+          </a>
+        </p>
+    </div>
+
     </section>
   </div>
 
