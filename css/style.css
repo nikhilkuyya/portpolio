@@ -77,13 +77,13 @@ a:hover {
   color: var(--white);
   font-family: var(--mono);
   text-decoration: none;
+  border: 0px;
 }
 
 .button:hover,.button:focus {
   color: var(--black);
   background-color: var(--hotmag);
   outline: var(--ocean);
-  border: 0px;
 }
 
 .section-plum {
