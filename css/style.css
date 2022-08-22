@@ -80,7 +80,7 @@ a:hover {
   border: 0px;
 }
 
-.button:hover,.button:focus {
+.button:hover, .button:focus {
   color: var(--black);
   background-color: var(--hotmag);
   outline: var(--ocean);
@@ -188,7 +188,7 @@ nav h1 span.name {
 #contact {
   color: var(--white);
   padding: 2rem 0;
-  width: 400px;
+  width: 450px;
   margin: 0 auto;
 }
 
@@ -202,7 +202,7 @@ nav h1 span.name {
 }
 
 #contact form h5 {
-  margin : 0;
+  margin: 0;
   font-family: var(--mono);
   font-weight: normal;
 }
@@ -219,13 +219,13 @@ nav h1 span.name {
 }
 
 #contact form textarea {
-  padding : 1rem;
+  padding: 1rem;
   font-size: 0.8rem;
   border-radius: 8px;
   width: 100%;
 }
 
-#contact form input:focus,input:focus-visible,textarea:focus-visible {
+#contact form input:focus, input:focus-visible, textarea:focus-visible {
   outline: var(--magenta);
   outline-style: solid;
   outline-width: 0.2rem;
@@ -237,7 +237,7 @@ nav h1 span.name {
 
 #contact form {
   display: flex;
-  flex-flow: column nowrap; 
+  flex-flow: column nowrap;
   gap: 1rem;
 }
 
@@ -256,7 +256,7 @@ nav h1 span.name {
 #contact .contact-options {
   display: flex;
   flex-flow: row nowrap;
-  gap : 2rem;
+  gap: 2rem;
 }
 
 #contact .contact-options .divider-text {
@@ -301,7 +301,7 @@ footer [class*="fa-"] {
 }
 
 #portpolio article {
-  margin-bottom : 3rem;
+  margin-bottom: 3rem;
 }
 
 #portpolio article h3 {
@@ -309,28 +309,28 @@ footer [class*="fa-"] {
 }
 
 #portpolio article h4 {
-   margin : 0;
+  margin: 0;
   font-family: var(--mono);
   font-weight: normal;
   font-size: 1rem;
 }
 
 #portpolio article .black-box {
-  background-color : var(--black);
+  background-color: var(--black);
   padding: 1rem;
-  border-radius : 10px;
+  border-radius: 10px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
 #portpolio article ul {
-  margin : 0;
+  margin: 0;
   list-style: none;
   padding: 0;
 }
 
 #portpolio article .tech-stack {
-  display : flex;
+  display: flex;
   flex-flow: row wrap;
   gap: 1rem;
   justify-content: flex-start;
@@ -341,50 +341,50 @@ footer [class*="fa-"] {
   border-left: 2px solid var(--darkTurqoise);
   border-top: 2px solid var(--darkTurqoise);
   padding: 1rem;
-  border-radius : 10px;
+  border-radius: 10px;
 }
 
 
 /** responsive */
 @media(min-width: 550px) {
   #portpolio article {
-    display : grid;
-    grid-template-columns: repeat(10,1fr);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     gap: 1rem;
   }
-  
+
   #portpolio article img {
     grid-row: 1/2;
   }
-  
+
   #portpolio article .text {
     grid-row: 1/2;
     order: 2;
   }
-  
+
   #portpolio article:nth-child(odd) img {
-    grid-column : 1/6;
+    grid-column: 1/6;
   }
-  
+
   #portpolio article:nth-child(odd) .text {
     grid-column: 5/11;
     text-align: right;
- }
-  
+  }
+
   #portpolio article:nth-child(even) img {
     grid-column: 6/11;
   }
-  
-  
+
+
   #portpolio article:nth-child(even) .text {
     grid-column: 1/7;
     text-align: left;
   }
-  
- #portpolio article:nth-child(odd) .tech-stack {
+
+  #portpolio article:nth-child(odd) .tech-stack {
     justify-content: flex-end;
   }
-  
+
   #portpolio article:nth-child(even) .tech-stack {
     justify-content: flex-start;
   }
@@ -392,16 +392,16 @@ footer [class*="fa-"] {
 
 
 @media(min-width: 850px) {
-  
-  nav,#intro,#portpolio,#footer,#contact {
+
+  nav, #intro, #portpolio, #footer, #contact {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+
   nav li:first-child {
     flex-basis: auto;
     text-align: center;
     margin-right: auto;
   }
 }
-
